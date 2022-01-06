@@ -7,11 +7,10 @@
     $senha = $_POST['senha'];
     $CPF = $_POST['CPF'];
 
-    //echo ola;
-
     require 'conec.php';
-
+    
     $sql = "select * from USUARIO where USU_cpf = '$CPF'";
+    echo $sql;
     
     $result = $pdo->query($sql);
 

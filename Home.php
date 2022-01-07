@@ -25,12 +25,12 @@ require 'conec.php';
         <a href="DeletarConta.php">Apagar conta</a>
         <a href="TrocarNome.php">Mudar nome</a>
 
-    <h1>Bem vindo(a) <?= $_SESSION['USU_nome'] ?></h1>
+    <h1>Bem vindo(a) <?= $_SESSION['nome']  ?></h1>
 
     <fieldset>
         <legend>Campo de pesquisa</legend>
         <form action="Pesquisa.php" method="POST">
-        <input type="text" name="pesquisa" placeholder="EX: Carne">
+        <input type="text" name="pesquisa">
         <input type="submit" value="Pesquisar">
         </form>
     </fieldset>

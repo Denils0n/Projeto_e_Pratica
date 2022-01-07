@@ -4,7 +4,9 @@ $Nome = $_POST['Nome'];
 $id = $_POST['id'];
 
 require 'conec.php';
+
 $cmd = $pdo->prepare("UPDATE USUARIO SET USU_nome = :Nome WHERE USU_codigo =:id");
+
 $cmd -> bindValue(":Nome",$Nome);
 
 $cmd -> bindValue(":id",$id);

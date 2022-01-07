@@ -6,7 +6,7 @@
 
     require 'conec.php';
 
-    $sql = "select USU_email,USU_senha from USUARIO where USU_email = '$email' and USU_senha = '$senha'";
+    $sql = "select USU_codigo,USU_nome from USUARIO where USU_email = '$email' and USU_senha = '$senha'";
     
     $resultado = $pdo->query($sql);
 
@@ -20,8 +20,10 @@
     session_start();
 
     $_SESSION['auth'] = true;
-    $_SESSION['USU_codigo'] = $USUARIO['USU_codigo'];
-    $_SESSION['USU_nome'] = $USUARIO['USU_nome'];
+    $_SESSION['codigo'] = $USUARIO['USU_codigo'];
+    $_SESSION['nome'] = $USUARIO['USU_nome'];
+
+    
 
     header("location: Home.php?msg= conta deletada");
 

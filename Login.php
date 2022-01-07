@@ -6,7 +6,7 @@
 
     require 'conec.php';
 
-    $sql = "select * from USUARIO where USU_email = '$email' and USU_senha = '$senha'";
+    $sql = "select USU_email,USU_senha from USUARIO where USU_email = '$email' and USU_senha = '$senha'";
     
     $resultado = $pdo->query($sql);
 

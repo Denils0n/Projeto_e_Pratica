@@ -30,6 +30,7 @@ require 'conec.php';
     <fieldset>
         <legend>Campo de pesquisa</legend>
         <form action="Pesquisa.php" method="POST">
+            
         <input type="text" name="pesquisa">
         <input type="submit" value="Pesquisar">
         </form>

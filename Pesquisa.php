@@ -5,9 +5,14 @@ $pesquisa = $_POST['pesquisa'];
 require 'conec.php';
 
 
-$sql = "select RES_exp from RESTAURANTE where RES_exp = '$pesquisa'";
+$sql = "SELECT RES_exp FROM RESTAURANTE WHERE RES_exp = '$pesquisa'";
+
+$cmd = $pdo -> prepare($sql);
+
+$cmd -> execute();
 
 $resultado = $pdo->query($sql);
+
 $PESQUISA = $resultado->fetch();
 
 
@@ -37,8 +42,14 @@ session_start();
 
 <?php
 
- $sql = " SELECT RES_codigo,RES_nome, RES_exp, RES_local, RES_dias_abre from RESTAURANTE where RES_exp = '$pesquisa' ORDER BY RES_nome";
+ $sql = " SELECT RES_codigo,RES_nome, RES_exp, RES_local, RES_dias_abre FROM RESTAURANTE WHERE RES_exp = '$pesquisa' ORDER BY RES_nome";
+ 
+ $cmd = $pdo -> prepare($sql);
+ 
+ $cmd -> execute();
+ 
  $cmd = $pdo ->query($sql);
+ 
  $dados = $cmd -> fetchAll(PDO::FETCH_ASSOC);
 
 

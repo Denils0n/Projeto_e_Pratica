@@ -22,7 +22,7 @@
     
     if ($result->fetch() !== false ) {
         
-    header("location: index.php?msg=CPF já registrado.");
+    header("location:RegistrarUsuario.php?msg=CPF já registrado.");
 
         exit();
     }
@@ -40,7 +40,7 @@
     
     if ($result->fetch() !== false ) {
         
-    header("location: index.php?msg=email já registrado.");
+    header("location:RegistrarUsuario.php?msg=email já registrado.");
 
         exit();
     }
@@ -59,6 +59,6 @@
     
     $cmd -> execute();
     
-    header("location: index.php?msg=Usuário registrado.");
+    header("location:Login.php?msg=Usuário registrado.");
 
 ?>

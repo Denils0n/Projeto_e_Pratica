@@ -11,26 +11,11 @@
 
         <div> <?= $_GET['msg'] ?> </div>
 
-    <?php endif ?>    
-<fieldset>
-        <legend>Login</legend>
-        <form action="Login.php" method="POST">
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="senha" placeholder="Senha">
-        <input type="submit" value="Enviar">
-        </form>
-    </fieldset>
+    <?php endif ?>   
     
-    <fieldset>
-        <legend>Registrar</legend>
-        <form action="AddUser.php" method="POST">
-        <input type="text" name="nome" placeholder="Nome">
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="senha" placeholder="Senha">
-        <input type="number" name="CPF" placeholder="CPF">
-        <input type="submit" value="Enviar">
-        </form>
-    </fieldset>
+    <a href="Login.php">Logar</a> 
+        
+    
     
 
 </body>

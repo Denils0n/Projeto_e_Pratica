@@ -2,11 +2,6 @@
 
 session_start();
 
-if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true ) {
-    header("location: index.php");
-    exit();
-}
-
 require 'conec.php';
 
 ?>
@@ -21,10 +16,16 @@ require 'conec.php';
     </head>
     <body>
         
+        <?php if ($_SESSION['auth'] !== null) :?>
+            <a href="">Perfil</a>
+        <?php endif?>
         
-        <a href="DeletarConta.php">Apagar conta</a>
-        <a href="TrocarNome.php">Mudar nome</a>
-
+        
+        <?php if ($_SESSION['auth'] === null) :?>
+            </p> <a href="Login.php"> Usar conta</a> <a href="RegistrarUsuario.php">Criar uma conta</a>
+            
+        <?php endif?>
+        
     <h1>Bem vindo(a) <?= $_SESSION['nome']  ?></h1>
 
     <fieldset>

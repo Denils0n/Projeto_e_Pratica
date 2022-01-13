@@ -36,6 +36,6 @@ $cmd -> bindValue(":Telefone",$Telefone);
 
 $cmd -> execute();
 
-header("location: VerificaDadosLogin.php?msg=Restaurante cadastrado.");
+header("location: re.php?msg=Restaurante cadastrado.");
 
 ?>

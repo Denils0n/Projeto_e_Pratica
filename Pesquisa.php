@@ -84,13 +84,6 @@ session_start();
     <?php endfor?>
 
 
-
-
-
-
-
-
-
 </table>
 
 

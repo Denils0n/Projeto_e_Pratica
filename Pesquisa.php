@@ -29,6 +29,97 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input {
+            display: block;
+        }
+
+        body {
+            background-color: #b1d0e0;
+
+        }
+
+        h1 {
+            margin-left: 25%;
+        }
+
+        h2 {
+            margin-top: 8%;
+            margin-left: 47%;
+            font-size: 40px;
+
+        }
+
+        .text {
+            color: rgb(7, 7, 7);
+            font-size: 2vw;
+        }
+
+
+
+        input {
+            display: block;
+            margin-top: -2.5%;
+            margin-left: 2%;
+            font-size: 20px;
+            float: left;
+        }
+
+        #p {
+
+            margin-top: -2%;
+            margin-left: 2%;
+            font-size: 300%;
+        }
+
+        #d {
+
+            font-size: 150%;
+
+
+        }
+
+        #pes {
+
+            margin-left: 24.2%;
+
+        }
+
+        #h {
+
+            margin-top: -3.8%;
+            margin-left: -1%;
+            font-size: 40px;
+            width: 110%;
+            height: 50%;
+
+
+            background-color: #406882;
+            border-radius: 1px;
+
+        }
+
+        #a2 {
+
+            margin-left: 76.84%;
+            font-size: 200%;
+
+        }
+
+        #a1 {
+
+            margin-top: -4px;
+            font-size: 200%;
+
+        }
+
+        #CampCima {
+
+            background-color: #0071a1;
+
+
+        }
+    </style>
 </head>
 <body>
     
@@ -56,7 +147,7 @@ session_start();
 ?>
 
 <table>
-    <tr>
+    <tr id="CampCima">
         <td>Nome</td>
         <td>Expecialidade</td>
         <td>Localização</td>
@@ -78,7 +169,6 @@ session_start();
                 <?php endif ?>
             
             <?php endforeach ?>
-        <td><a href="">Apagar</a> <a href=""> editar</a></td>
         </tr>
 
     <?php endfor?>
